@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/viktoroleniuk/Documents/diploma/mylinearmath/build/macos-arm64",
+  "command": "/usr/bin/c++ -I/Users/viktoroleniuk/Documents/diploma/mylinearmath/include -std=gnu++26 -arch arm64 -o CMakeFiles/mylinearmath.dir/src/Vector.cpp.o -c /Users/viktoroleniuk/Documents/diploma/mylinearmath/src/Vector.cpp",
+  "file": "/Users/viktoroleniuk/Documents/diploma/mylinearmath/src/Vector.cpp",
+  "output": "/Users/viktoroleniuk/Documents/diploma/mylinearmath/build/macos-arm64/CMakeFiles/mylinearmath.dir/src/Vector.cpp.o"
+},
+{
+  "directory": "/Users/viktoroleniuk/Documents/diploma/mylinearmath/build/macos-arm64",
+  "command": "/usr/bin/c++ -I/Users/viktoroleniuk/Documents/diploma/mylinearmath/include -std=gnu++26 -arch arm64 -o CMakeFiles/mylinearmath.dir/src/matrix.cpp.o -c /Users/viktoroleniuk/Documents/diploma/mylinearmath/src/matrix.cpp",
+  "file": "/Users/viktoroleniuk/Documents/diploma/mylinearmath/src/matrix.cpp",
+  "output": "/Users/viktoroleniuk/Documents/diploma/mylinearmath/build/macos-arm64/CMakeFiles/mylinearmath.dir/src/matrix.cpp.o"
+}
+]
