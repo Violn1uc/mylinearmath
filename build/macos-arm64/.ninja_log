@@ -1,5 +1,0 @@
-# ninja log v7
-3	194	1786129318354797500	CMakeFiles/mylinearmath.dir/src/matrix.cpp.o	27347ee62b34a74
-3	263	1786129318354509122	CMakeFiles/mylinearmath.dir/src/Vector.cpp.o	7da3a7946d96b5ac
-227	254	1786129081714332459	libmylinearmath.dylib	d88c12227df7a9ef
-263	294	1786129318614741876	libmylinearmath.a	ac369ad16bc0a61f
