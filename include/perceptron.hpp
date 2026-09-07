@@ -14,7 +14,7 @@ public:
 		m_size = size;
 		std::random_device rd;
 		std::mt19937 gen(rd());
-		std::uniform_real_distribution<double> dist(1.0, 1.0);
+		std::uniform_real_distribution<double> dist(-1.0, 1.0);
 		for (double &w : m_weight)
 		{
 			w = dist(gen);
