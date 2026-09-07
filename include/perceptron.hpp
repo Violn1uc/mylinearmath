@@ -21,7 +21,12 @@ public:
 		}
 	}
 
-	bool activate(double sum) { return 1.0 / (1.0 + std::exp(-sum)); }
+	bool activate(double sum)
+	{
+		if (sum >= 0.5)
+			return true;
+		return false;
+	}
 
 	bool input(std::vector<double> inputs, double goal)
 	{
