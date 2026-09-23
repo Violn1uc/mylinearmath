@@ -73,3 +73,7 @@ build/
 .DS_Store
 **/.DS_Store
 
+
+# Visual Studio
+.vs/
+out/

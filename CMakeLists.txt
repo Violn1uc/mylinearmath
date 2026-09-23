@@ -1,21 +1,45 @@
-cmake_minimum_required(VERSION 4.3.3)
+cmake_minimum_required(VERSION 4.4.3)
 
-project(mylinearmath LANGUAGES CXX)
+project(neuralnetwork LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_library(${PROJECT_NAME}  STATIC
-    src/vector.cpp
-    src/matrix.cpp  
+# ---------------------------------------------------------------------------
+# Neural network library
+# ---------------------------------------------------------------------------
+
+add_library(neuralnetwork STATIC
+    src/NeuralNetwork.cpp
+    src/Logger.cpp
 )
 
-target_include_directories(${PROJECT_NAME} PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
+target_include_directories(neuralnetwork
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    WINDOWS_EXPORT_ALL_SYMBOLS ON
+# ---------------------------------------------------------------------------
+# Main application
+# ---------------------------------------------------------------------------
+
+add_executable(neuralnetwork_app
+    src/main.cpp
 )
 
+target_link_libraries(neuralnetwork_app
+    PRIVATE
+        neuralnetwork
+)
+
+# ---------------------------------------------------------------------------
+# Visual Studio debugger
+# ---------------------------------------------------------------------------
+
+set_target_properties(neuralnetwork_app PROPERTIES
+    VS_DEBUGGER_WORKING_DIRECTORY
+        "${CMAKE_CURRENT_SOURCE_DIR}"
+)

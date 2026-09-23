@@ -18,15 +18,28 @@
                 "CMAKE_PREFIX_PATH": "/opt/homebrew/opt/qt"
             }
         },
-        {
-            "name": "macos-x64",
-            "inherits": "base",
-            "binaryDir": "${sourceDir}/build/macos-intel",
-            "cacheVariables": {
-                "VCPKG_TARGET_TRIPLET": "x64-osx",
-                "CMAKE_OSX_DEPLOYMENT_TARGET": "10.15",
-                "CMAKE_PREFIX_PATH": "/usr/local/opt/qt"
-            }
+      {
+        "name": "macos-x64",
+        "inherits": "base",
+        "binaryDir": "${sourceDir}/build/macos-intel",
+        "cacheVariables": {
+          "VCPKG_TARGET_TRIPLET": "x64-osx",
+          "CMAKE_OSX_DEPLOYMENT_TARGET": "10.15",
+          "CMAKE_PREFIX_PATH": "/usr/local/opt/qt"
         }
+      },
+      {
+        "name": "win10-x64",
+        "inherits": "base",
+        "binaryDir": "${sourceDir}/build/win10-x64",
+        "architecture": {
+          "value": "x64",
+          "strategy": "external"
+        },
+        "cacheVariables": {
+          "VCPKG_TARGET_TRIPLET": "x64-windows",
+          "CMAKE_PREFIX_PATH": "C:/Qt/6.8.0/msvc2022_64"
+        }
+      }
     ]
 }
